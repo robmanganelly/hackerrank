@@ -1,0 +1,21 @@
+{
+  "name": "hackerrank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": " pnpm pretest && jasmine && pnpm posttest",
+    "pretest": "pnpm build && cp -r ./dist/* ./spec/",
+    "posttest": "echo test passed && exit 0",
+    "build": "tsc -p tsconfig.json",
+    "test:init": "rm ./spec/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^4.3.1",
+    "jasmine": "^4.6.0",
+    "typescript": "^5.0.4"
+  }
+}
